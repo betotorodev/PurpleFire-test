@@ -1,8 +1,11 @@
 import Image from 'next/image'
-import HeroImage from '@/public/hero-image.jpeg'
+import HeroImage from '@/public/hero-image.webp'
 import { varta, merriweather, karla } from '@/app/fonts'
 import { ArrowBrownDown } from '@/app/ui/icons/arrow-brown-down'
 import { ArrowLightRight } from '@/app/ui/icons/arrow-light-right'
+import { Carousel } from '@/app/ui/carousel'
+import { ArrowBrownRight } from './ui/icons/arrow-brown-right'
+import { ArrowBrownLeft } from './ui/icons/arrow-brown-left'
 
 export default function Home() {
   return (
@@ -27,7 +30,7 @@ export default function Home() {
           </div>
         </div>
         <div className='w-full h-screen overflow-hidden relative'>
-          <Image src={HeroImage} alt='Hero' />
+          <Image src={HeroImage} alt='Hero' priority />
         </div>
       </section>
       {/* hero part two */}
@@ -65,6 +68,23 @@ export default function Home() {
         <article>
           <input className={`${varta.variable} font-sans bg-[#F3EEE84D] pt-[15px] px-[15px] pb-[10px] mr-4 w-[297px] text-lg font-normal leading-[25px] text-[#A06056]`} type='text' placeholder='email@address.com' />
           <button className={`${karla.variable} font-action px-[30px] py-2 text-[17px] text-white bg-[#534B42] font-bold leading-[25px] tracking-[0.3px] h-[50px]`}>Suscribe</button>
+        </article>
+      </section>
+      {/* carrousel */}
+      <section className='pt-16 pb-[70px]'>
+        <Carousel />
+        <article className='flex justify-between px-[150px] mt-[40px]'>
+          <div className='flex gap-[30px]'>
+            <h2 className={`${merriweather.variable} font-serif text-[35px] w-[360px] text-[#121212] font-light mb-[15px] tracking-[-0.3px] leading-[40px]`}>Inspirations</h2>
+            <p className={`${varta.variable} font-sans font-normal w-[359px] text-[#706458E5] text-lg leading-[25px]`}>Our experts are keen to stay on top of trends in order to offer you new inspirations for your interior and exterior every day. Remember that to inspire you we have to inspire ourselves and we want to share that with you.</p>
+          </div>
+          <div>
+            <div className='flex gap-[11px] mb-5'>
+              <ArrowBrownLeft />
+              <ArrowBrownRight />
+            </div>
+            <span className={`${varta.variable} font-sans font-normal text-[#706458] opacity-50 text-lg leading-[25px]`}>01/06</span>
+          </div>
         </article>
       </section>
     </main>
