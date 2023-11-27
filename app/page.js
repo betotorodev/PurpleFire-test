@@ -30,10 +30,11 @@ export default function Home() {
           <Image src={HeroImage} alt='Hero' />
         </div>
       </section>
+      {/* hero part two */}
       <section className='flex gap-12 w-full px-[150px] py-[70px] bg-[#F3EEE8]'>
         <div>
           <h1 className={`${merriweather.variable} w-[458px] font-serif text-[55px] text-[#706458] font-light mr-8 mb-[30px] tracking-[-0.6px] leading-[60px]`}>We stay by your side to design your projects</h1>
-          <small className={`${karla.variable} font-action flex items-center text-[17px] font-bold leading-[25px] tracking-[0.3px] text-[#A06056]`}>Find out more <ArrowLightRight /></small>
+          <a className={`${karla.variable} font-action flex items-center text-[17px] font-bold leading-[25px] tracking-[0.3px] text-[#A06056] cursor-pointer`}>Find out more <ArrowLightRight /></a>
         </div>
         <article className='flex flex-wrap gap-y-[30px] pt-5'>
           <div className='w-[259px]'>
@@ -52,6 +53,18 @@ export default function Home() {
             <h3 className={`${varta.variable} font-sans font-semibold text-[#A06056] text-[25px] mb-3`}>Installation Service</h3>
             <p className={`${varta.variable} font-sans font-normal text-[#706458E5] text-lg leading-[25px]`}>Our furniture packaged in flat packs are designed for easy assembly. But you can call on our partner.</p>
           </div>
+        </article>
+      </section>
+      {/* call to action */}
+      <section className='flex justify-between items-center px-[150px] py-[70px]'>
+        <article>
+          <h2 className={`${merriweather.variable} font-serif text-[35px] text-[#121212] font-light mb-[15px] tracking-[-0.3px] leading-[40px]`}>Be aware of the latest trends</h2>
+          <p className={`${varta.variable} font-sans font-normal text-[#706458E5] text-lg leading-[25px] mb-[10px]`}>Stay informed of new trends, but also of our various offers.</p>
+          <a className={`${karla.variable} font-action flex items-center text-[17px] font-bold leading-[25px] tracking-[0.3px] text-[#A06056] cursor-pointer`}>Learn more <ArrowLightRight /></a>
+        </article>
+        <article>
+          <input className={`${varta.variable} font-sans bg-[#F3EEE84D] pt-[15px] px-[15px] pb-[10px] mr-4 w-[297px] text-lg font-normal leading-[25px] text-[#A06056]`} type='text' placeholder='email@address.com' />
+          <button className={`${karla.variable} font-action px-[30px] py-2 text-[17px] text-white bg-[#534B42] font-bold leading-[25px] tracking-[0.3px] h-[50px]`}>Suscribe</button>
         </article>
       </section>
     </main>
