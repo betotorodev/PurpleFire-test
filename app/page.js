@@ -8,9 +8,10 @@ import { Carousel } from '@/app/ui/carousel'
 import { ArrowBrownRight } from '@/app/ui/icons/arrow-brown-right'
 import { ArrowBrownLeft } from '@/app/ui/icons/arrow-brown-left'
 import { Facebook } from '@/app/ui/icons/facebook'
-import { Instagram, instgram } from '@/app/ui/icons/instagram'
+import { Instagram } from '@/app/ui/icons/instagram'
 import { Linkedin } from '@/app/ui/icons/linkedin'
 import { Twitter } from '@/app/ui/icons/twitter'
+import { Contact } from './ui/icons/contact'
 
 export default function Home() {
   return (
@@ -35,6 +36,9 @@ export default function Home() {
           </div>
         </div>
         <div className='w-full h-screen overflow-hidden relative'>
+          <div className='absolute right-[40px] top-[40px]'>
+            <Contact />
+          </div>
           <Image src={HeroImage} alt='Hero' priority />
         </div>
       </section>
