@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-varta)', 'sans-serif'],
-        serif: ['var(--font-merriweather)', 'serif']
+        serif: ['var(--font-merriweather)', 'serif'],
+        action: ['var(--font-karla)', 'sans-serif']
       }
     }
   },
