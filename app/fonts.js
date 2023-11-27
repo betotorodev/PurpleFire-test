@@ -1,4 +1,4 @@
-import { Varta, Merriweather, Karla } from 'next/font/google'
+import { Varta, Merriweather, Karla, Inter } from 'next/font/google'
 
 export const merriweather = Merriweather({
   weight: ['300', '400', '700', '900'],
@@ -20,4 +20,11 @@ export const karla = Karla({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-karla'
+})
+export const inter = Inter({
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter'
 })

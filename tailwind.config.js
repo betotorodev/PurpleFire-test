@@ -10,7 +10,8 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-varta)', 'sans-serif'],
         serif: ['var(--font-merriweather)', 'serif'],
-        action: ['var(--font-karla)', 'sans-serif']
+        action: ['var(--font-karla)', 'sans-serif'],
+        product: ['var(--font-inter)', 'sans-serif']
       },
       animation: {
         marquee: 'marquee var(--duration) linear infinite'
