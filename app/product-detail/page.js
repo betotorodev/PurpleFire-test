@@ -74,6 +74,7 @@ const Details = {
 export default function ProductDetail() {
   const [showModal, setShowModal] = useState(false)
   const [detail, showDetail] = useState(Details.DESCRIPTION)
+  const [susbscribe, setSusbscribe] = useState(false)
   return (
     <div className='w-full'>
       {/* head */}
@@ -285,8 +286,8 @@ export default function ProductDetail() {
           <h5 className='text-xl '>Sign up our newsletter</h5>
         </div>
         <form className='flex z-10'>
-          <input className='h-full text-[20px] py-[25px] pl-[37px] pr-[200px]' type='text' placeholder='Enter your email' />
-          <button className='h-full text-[20px] text-white w-[268px] bg-[#E73C17]'>SUBSCRIBE</button>
+          <input className='h-full text-[20px] py-[25px] pl-[37px] pr-[200px]' type='text' placeholder={`${susbscribe ? 'joedoe@gmail.com' : 'Enter your email'}`} />
+          <button onClick={(e) => { e.preventDefault(); setSusbscribe(true) }} className={`h-full text-[20px] text-white w-[268px] ${susbscribe ? 'bg-[#191919]' : 'bg-[#E73C17]'}`}>{susbscribe ? 'SUBSCRIBED!' : 'SUBSCRIBE'}</button>
         </form>
       </section>
       {/* footer */}
