@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Logo from '@/public/Needus.webp'
 import Contact from '@/public/contact.webp'
@@ -24,6 +26,7 @@ import { InstagramTwo } from '../ui/icons/instagram-2'
 import { Youtube } from '../ui/icons/youtube'
 import { Cellphone } from '../ui/icons/cellphone'
 import { Location } from '../ui/icons/location'
+import { useState } from 'react'
 
 const relatedProducts = [
   {
@@ -63,6 +66,7 @@ const relatedProducts = [
 ]
 
 export default function ProductDetail() {
+  const [showModal, setShowModal] = useState(false)
   return (
     <div className='w-full'>
       {/* head */}
@@ -83,11 +87,20 @@ export default function ProductDetail() {
             <input className='pl-[45px] py-[26px]' type='text' placeholder='Search Products' />
             <button className='py-[21px] px-5 mr-[5px] bg-[#2F333A]'><Search /></button>
           </div>
-          <div className='flex justify-between items-center gap-[131px] border-2 py-[26px] px-[28px]'>
-            <span className='flex justify-between items-center'>All Categories <ArrowLightDown color='black' /></span>
+          <div className='relative flex justify-between items-center gap-[131px] border-2 py-[26px] px-[28px]'>
+            <span className='flex justify-between items-center' onClick={() => setShowModal(!showModal)}>All Categories <ArrowLightDown color='black' /></span>
             <div className='flex'>
               <a className='pr-2 mr-2 border-r-2' href='#'>Login</a>
               <a href='#'>Signup</a>
+            </div>
+            {/* dropdown */}
+            <div className={`${showModal ? '' : 'hidden'} absolute top-full shadow-2xl left-0 p-[25px] bg-white min-h-[253px]`}>
+              <ul className='w-[203px] text-[20px]'>
+                <li className='border-b pb-[18px] pt-[18px] font-light'>Category 1</li>
+                <li className='border-b pb-[18px] pt-[18px] font-light'>Category 1</li>
+                <li className='border-b pb-[18px] pt-[18px] font-light'>Category 1</li>
+                <li className='pb-[18px] pt-[18px] font-light'>Category 1</li>
+              </ul>
             </div>
           </div>
         </form>
