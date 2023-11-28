@@ -148,6 +148,20 @@ export default function ProductDetail() {
           </div>
         </article>
       </section>
+      {/* product description */}
+      <section className='w-full'>
+        <nav className='mb-[15px]'>
+          <ul className='flex justify-around px-[160px] border-b'>
+            <li className='text-[22px] font-medium pb-[15px] border-b border-b-[#E73C17]'>Description</li>
+            <li className='text-[22px] font-medium'>Specification</li>
+            <li className='text-[22px] font-medium'>Reviews</li>
+          </ul>
+        </nav>
+        <p className='px-[192px]'>The LG C2 42 (106cm) 4K Smart OLED evo TV is the best all around OLED TV we've tested. Although all OLEDs deliver similar fantastic picture quality, this one stands out for its value because it has many gaming oriented features that are great for gamers.
+          *Only 65G2 is shown in the image for example purposes. All 2022 LG OLED models feature eco-friendly packaging.
+          **65C2 Stand model is at a minimum 39% lighter than the C1 series. <span className='text-[#E73C17]'>More...</span>
+        </p>
+      </section>
     </div>
   )
 }
