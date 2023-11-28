@@ -65,8 +65,15 @@ const relatedProducts = [
   }
 ]
 
+const Details = {
+  DESCRIPTION: 'description',
+  SPECIFICATION: 'specification',
+  REVIEWS: 'reviews'
+}
+
 export default function ProductDetail() {
   const [showModal, setShowModal] = useState(false)
+  const [detail, showDetail] = useState(Details.DESCRIPTION)
   return (
     <div className='w-full'>
       {/* head */}
@@ -97,9 +104,10 @@ export default function ProductDetail() {
             <div className={`${showModal ? '' : 'hidden'} absolute top-full shadow-2xl left-0 p-[25px] bg-white min-h-[253px]`}>
               <ul className='w-[203px] text-[20px]'>
                 <li className='border-b pb-[18px] pt-[18px] font-light'>Category 1</li>
-                <li className='border-b pb-[18px] pt-[18px] font-light'>Category 1</li>
-                <li className='border-b pb-[18px] pt-[18px] font-light'>Category 1</li>
-                <li className='pb-[18px] pt-[18px] font-light'>Category 1</li>
+                <li className='border-b pb-[18px] pt-[18px] font-light'>Category 2</li>
+                <li className='border-b pb-[18px] pt-[18px] font-light'>Category 3</li>
+                <li className='border-b pb-[18px] pt-[18px] font-light'>Category 4</li>
+                <li className='pb-[18px] pt-[18px] font-light'>Category 5</li>
               </ul>
             </div>
           </div>
@@ -119,7 +127,7 @@ export default function ProductDetail() {
           <ul className='flex gap-[21px] text-white pl-[129px] py-[28px] pr-[88px]'>
             <li className='flex items-center gap-2'>HOME <ArrowLightDown /></li>
             <li className='flex items-center gap-2'>ABOUT <ArrowLightDown /></li>
-            <li className='flex items-center gap-2 text-[#E73C17]'>PRODUCT <ArrowLightDown /></li>
+            <li className='flex items-center gap-2 text-[#E73C17]'>PRODUCT <ArrowLightDown color='#E73C17' /></li>
             <li className='flex items-center gap-2'>PAGES <ArrowLightDown /></li>
             <li className='flex items-center gap-2'>CONTACT <ArrowLightDown /></li>
           </ul>
@@ -213,15 +221,26 @@ export default function ProductDetail() {
       <section className='w-full'>
         <nav className='mb-[15px]'>
           <ul className='flex justify-around px-[160px] border-b'>
-            <li className='text-[22px] font-medium pb-[15px] border-b border-b-[#E73C17]'>Description</li>
-            <li className='text-[22px] font-medium'>Specification</li>
-            <li className='text-[22px] font-medium'>Reviews</li>
+            <li onClick={() => showDetail(Details.DESCRIPTION)} className={`cursor-pointer text-[22px] font-medium pb-[15px] border-b ${detail === Details.DESCRIPTION && 'border-b-[#E73C17]'}`}>Description</li>
+            <li onClick={() => showDetail(Details.SPECIFICATION)} className={`cursor-pointer text-[22px] font-medium pb-[15px] border-b ${detail === Details.SPECIFICATION && 'border-b-[#E73C17]'}`}>Specification</li>
+            <li onClick={() => showDetail(Details.REVIEWS)} className={`cursor-pointer text-[22px] font-medium pb-[15px] border-b ${detail === Details.REVIEWS && 'border-b-[#E73C17]'}`}>Reviews</li>
           </ul>
         </nav>
-        <p className='px-[192px]'>The LG C2 42 (106cm) 4K Smart OLED evo TV is the best all around OLED TV we've tested. Although all OLEDs deliver similar fantastic picture quality, this one stands out for its value because it has many gaming oriented features that are great for gamers.
-          *Only 65G2 is shown in the image for example purposes. All 2022 LG OLED models feature eco-friendly packaging.
-          **65C2 Stand model is at a minimum 39% lighter than the C1 series. <span className='text-[#E73C17]'>More...</span>
-        </p>
+        {detail === Details.DESCRIPTION &&
+          <p className='px-[192px]'>
+            The LG C2 42 (106cm) 4K Smart OLED evo TV is the best all around OLED TV we've tested. Although all OLEDs deliver similar fantastic picture quality, this one stands out for its value because it has many gaming oriented features that are great for gamers.
+            *Only 65G2 is shown in the image for example purposes. All 2022 LG OLED models feature eco-friendly packaging.
+            **65C2 Stand model is at a minimum 39% lighter than the C1 series.
+            <span className='text-[#E73C17]'>More...</span>
+          </p>}
+        {detail === Details.SPECIFICATION &&
+          <p className='px-[192px]'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis, metus eu rhoncus efficitur, turpis sem tempus massa, id consectetur nunc purus in lectus. Donec non velit a odio volutpat volutpat in in nisi. Maecenas aliquet turpis lacus, id pharetra elit sagittis vel. Ut consectetur nisi quis ullamcorper pellentesque. Integer efficitur interdum nunc, ut elementum nulla. Phasellus feugiat nulla et rhoncus porttitor. Nullam at lectus sed turpis porttitor viverra accumsan hendrerit lorem. Praesent tincidunt nisi at nunc suscipit malesuada.
+          </p>}
+        {detail === Details.REVIEWS &&
+          <p className='px-[192px]'>
+            Suspendisse potenti. Sed dapibus bibendum orci, eget semper diam tincidunt eget. Nulla a mi non nulla fermentum molestie. Aenean magna massa, tempus quis risus nec, sollicitudin consectetur mi. Donec dictum nulla sed nulla semper elementum. Nulla dictum ultrices risus, id ornare arcu rutrum vel. Curabitur vestibulum id nisi at pellentesque. Aenean a lacinia tellus. Aliquam iaculis odio sit amet velit laoreet, non feugiat tellus elementum.
+          </p>}
       </section>
       {/* related products */}
       <section className='flex flex-col items-center mt-[135px]'>
