@@ -18,6 +18,7 @@ export default function ProductDetail() {
           <span className='flex gap-1 font-light'>USG <ArrowLightDown /></span>
         </div>
       </nav>
+      {/* form */}
       <section className='flex justify-between items-center w-full py-[37px] pl-[58px] pr-[40px]'>
         <div className='relative w-[168px] h-[50px]'>
           <Image src={Logo} alt='Needus logo' fill />
@@ -43,6 +44,7 @@ export default function ProductDetail() {
           </div>
         </div>
       </section>
+      {/* menu */}
       <header className='flex justify-between bg-[#2F333A] w-full h-[76px]'>
         <span className='flex items-center bg-[#E73C17] pl-[58px] pr-[48px] text-white gap-[17px] text-2xl font-medium'><Menu /> All Categories <ArrowLightDown width='30' height='30' /></span>
         <nav className='flex border-r-2 border-white'>
@@ -62,6 +64,11 @@ export default function ProductDetail() {
           </div>
         </div>
       </header>
+      {/* banner */}
+      <section className='flex flex-col justify-center items-center w-full bg-[#F4F5F8] py-20'>
+        <h1 className='text-[40px] font-medium text-[#191919]'>TV COLLECTION</h1>
+        <h2 className='text-lg font-light tracking-[3.6px] leading-[32px] text-[#191919]'>HOME / PRODUCT / TV / COLLECTION</h2>
+      </section>
     </div>
   )
 }
