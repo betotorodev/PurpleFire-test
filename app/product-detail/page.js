@@ -6,6 +6,10 @@ import TvOne from '@/public/tv-1.webp'
 import TvTwo from '@/public/tv-2.webp'
 import TvThree from '@/public/tv-3.webp'
 import TvFour from '@/public/tv-4.webp'
+import RelatedOne from '@/public/related-1.webp'
+import RelatedTwo from '@/public/related-2.webp'
+import RelatedThree from '@/public/related-3.webp'
+import RelatedFour from '@/public/related-4.webp'
 import { ArrowLightDown } from '@/app/ui/icons/arrow-light-down'
 import { Search } from '../ui/icons/search'
 import { Like } from '../ui/icons/like'
@@ -13,6 +17,44 @@ import { Cart } from '../ui/icons/cart'
 import { Menu } from '../ui/icons/menu'
 import { StarEmpty } from '../ui/icons/star-empty'
 import { StarFill } from '../ui/icons/star-fill'
+import { LikeFill } from '../ui/icons/like-fill'
+
+const relatedProducts = [
+  {
+    badge: 'NEW',
+    badgeColor: 'bg-[#12A05C]',
+    image: RelatedOne,
+    title: 'Sony BRAVIA XR Android Tv',
+    price: '$1000.66',
+    discount: true,
+    discountPrice: '$800.22',
+    like: LikeFill
+  },
+  {
+    badge: '-10%',
+    badgeColor: 'bg-[#E73C17]',
+    image: RelatedTwo,
+    title: 'Mi P1 Smart Android HD TV',
+    price: '$400.00',
+    discount: false
+  },
+  {
+    badge: 'HOT',
+    badgeColor: 'bg-[#FF9900]',
+    image: RelatedThree,
+    title: 'Konka OLED Android Tv',
+    price: '$700.00',
+    discount: false
+  },
+  {
+    badge: '2 Years Warranty',
+    badgeColor: 'bg-[#7F7CF6]',
+    image: RelatedFour,
+    title: 'TCL Roku Android Tv',
+    price: '$800.00',
+    discount: false
+  }
+]
 
 export default function ProductDetail() {
   return (
@@ -161,6 +203,41 @@ export default function ProductDetail() {
           *Only 65G2 is shown in the image for example purposes. All 2022 LG OLED models feature eco-friendly packaging.
           **65C2 Stand model is at a minimum 39% lighter than the C1 series. <span className='text-[#E73C17]'>More...</span>
         </p>
+      </section>
+      {/* related products */}
+      <section className='flex flex-col items-center mt-[135px]'>
+        <h1 className='text-[32px] font-medium text-[#191919] mb-[66px]'>Realted products</h1>
+        <ul className='flex justify-between w-full px-[80px] gap-[28px]'>
+          {
+            relatedProducts.map((product, index) => {
+              return (
+                <li className='flex flex-col' key={index}>
+                  <div className='relative pb-[47px] pt-[22px] px-[23px] mb-[38px] bg-[#F1F1F1]'>
+                    {product.like && <product.like />}
+                    <span className={`${product.badgeColor} rounded-full py-[5px] px-[20px] text-xs text-white`}>{product.badge}</span>
+                    <div className='flex items-center relative h-[249px]'>
+                      <Image src={product.image} alt={product.title} width={249} height={249} />
+                    </div>
+                    <button className='flex gap-6 my-0 mx-auto py-[15px] px-[31px] bg-white'><Cart width='18' height='18' /> Add to cart</button>
+                  </div>
+                  <div className='flex flex-col items-center'>
+                    <h3 className='text-[20px]'>{product.title}</h3>
+                    <div className='flex'>
+                      {product.discountPrice && <span className='text-[20px] font-bold mr-[11px]'>{product.discountPrice}</span>}
+                      <span className={`${product.discount && 'text-[#D9D9D9] line-through'} text-[20px] font-bold`}>{product.price}</span>
+                    </div>
+                  </div>
+                </li>
+              )
+            })
+          }
+        </ul>
+        <div className='flex justify-center gap-2 w-full my-[53px]'>
+          <div className='w-[14px] h-[14px] bg-[#E73C17] rounded-full' />
+          <div className='w-[14px] h-[14px] bg-[#F4F5F8] rounded-full' />
+          <div className='w-[14px] h-[14px] bg-[#F4F5F8] rounded-full' />
+          <div className='w-[14px] h-[14px] bg-[#F4F5F8] rounded-full' />
+        </div>
       </section>
     </div>
   )
