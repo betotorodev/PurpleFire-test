@@ -239,6 +239,18 @@ export default function ProductDetail() {
           <div className='w-[14px] h-[14px] bg-[#F4F5F8] rounded-full' />
         </div>
       </section>
+      {/* Join to the news letter */}
+      <section className='relative flex justify-between px-20 py-[29px] bg-center backdrop-grayscale' style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1515940279136-2f419eea8051?q=80&w=2157&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
+        <div className='absolute top-0 right-0 left-0 bottom-0 bg-black opacity-50 w-full' />
+        <div className='z-10 text-white'>
+          <h3 className='text-[28px] font-medium'>Join our newsletter and get offers</h3>
+          <h5 className='text-xl '>Sign up our newsletter</h5>
+        </div>
+        <form className='flex z-10'>
+          <input className='h-full text-[20px] py-[25px] pl-[37px] pr-[200px]' type='text' placeholder='Enter your email' />
+          <button className='h-full text-[20px] text-white w-[268px] bg-[#E73C17]'>SUBSCRIBE</button>
+        </form>
+      </section>
     </div>
   )
 }
