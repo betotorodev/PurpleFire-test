@@ -4,7 +4,7 @@ import { ArrowLightRight } from '@/app/ui/icons/arrow-light-right'
 import { Facebook } from '@/app/ui/icons/facebook'
 import { Instagram } from '@/app/ui/icons/instagram'
 import { Linkedin } from '@/app/ui/icons/linkedin'
-import { Twitter } from './ui/icons/twitter-icon'
+import { Twitter } from '@/app/ui/icons/twitter-icon'
 import FooterImage from '@/public/image-footer.webp'
 
 export const Footer = () => {
