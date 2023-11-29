@@ -146,9 +146,9 @@ export default function ProductDetail() {
         </div>
       </header>
       {/* banner */}
-      <section className='flex flex-col justify-center items-center w-full bg-[#F4F5F8] py-20'>
-        <h1 className='text-[40px] font-medium text-[#191919]'>TV COLLECTION</h1>
-        <h2 className='text-lg font-light tracking-[3.6px] leading-[32px] text-[#191919]'>HOME / PRODUCT / TV / COLLECTION</h2>
+      <section className='flex flex-col justify-center items-center w-full bg-[#F4F5F8] py-4 md:py-20'>
+        <h1 className='text-lg md:text-[40px] font-medium text-[#191919]'>TV COLLECTION</h1>
+        <h2 className='text-[10px] md:text-lg font-light md:tracking-[3.6px] md:leading-[32px] text-[#191919]'>HOME / PRODUCT / TV / COLLECTION</h2>
       </section>
       {/* Product */}
       <section className='flex flex-col md:flex-row gap-[35px] pl-[50px] pt-[82px] pr-[113px] pb-[104px]'>
