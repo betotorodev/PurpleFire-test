@@ -27,6 +27,7 @@ import { Youtube } from '../ui/icons/youtube'
 import { Cellphone } from '../ui/icons/cellphone'
 import { Location } from '../ui/icons/location'
 import { useState } from 'react'
+import { MenuMobileTwo } from '../ui/icons/menu-mobile-2'
 
 const relatedProducts = [
   {
@@ -78,7 +79,7 @@ export default function ProductDetail() {
   return (
     <div className='w-full'>
       {/* head */}
-      <nav className='flex justify-between w-full bg-[#2F333A] py-5 pl-20 pr-10 text-white'>
+      <nav className='hidden md:flex justify-between w-full bg-[#2F333A] py-5 pl-20 pr-10 text-white'>
         <h6 className='font-light'>Welcome to Needus & Get the best product</h6>
         <div className='flex'>
           <span className='flex gap-1 mr-[23px] pr-[18px] border-r-2 font-light'>ENG <ArrowLightDown /></span>
@@ -86,11 +87,14 @@ export default function ProductDetail() {
         </div>
       </nav>
       {/* form */}
-      <section className='flex justify-between items-center w-full py-[37px] pl-[58px] pr-[40px]'>
-        <div className='relative w-[168px] h-[50px]'>
+      <section className='flex justify-between items-center w-full pt-[27px] pb-[10px] md:py-[37px] px-4 md:pl-[58px] md:pr-[40px]'>
+        <div className='block md:hidden bg-[#E73C17] p-[9px]'>
+          <MenuMobileTwo />
+        </div>
+        <div className='relative w-[65px] md:w-[168px] h-[19px] md:h-[50px]'>
           <Image src={Logo} alt='Needus logo' fill />
         </div>
-        <form className='flex'>
+        <form className='hidden md:flex'>
           <div className='flex items-center border-2'>
             <input className='pl-[45px] py-[26px]' type='text' placeholder='Search Products' />
             <button className='py-[21px] px-5 mr-[5px] bg-[#2F333A]'><Search /></button>
@@ -122,7 +126,7 @@ export default function ProductDetail() {
         </div>
       </section>
       {/* menu */}
-      <header className='flex justify-between bg-[#2F333A] w-full h-[76px]'>
+      <header className='hidden md:flex justify-between bg-[#2F333A] w-full h-[76px]'>
         <span className='flex items-center bg-[#E73C17] pl-[58px] pr-[48px] text-white gap-[17px] text-2xl font-medium'><Menu /> All Categories <ArrowLightDown width='30' height='30' /></span>
         <nav className='flex border-r-2 border-white'>
           <ul className='flex gap-[21px] text-white pl-[129px] py-[28px] pr-[88px]'>
@@ -147,7 +151,7 @@ export default function ProductDetail() {
         <h2 className='text-lg font-light tracking-[3.6px] leading-[32px] text-[#191919]'>HOME / PRODUCT / TV / COLLECTION</h2>
       </section>
       {/* Product */}
-      <section className='flex gap-[35px] pl-[50px] pt-[82px] pr-[113px] pb-[104px]'>
+      <section className='flex flex-col md:flex-row gap-[35px] pl-[50px] pt-[82px] pr-[113px] pb-[104px]'>
         <article className='flex gap-3'>
           <ul className='flex flex-col gap-[30px]'>
             <div className='relative bg-white border w-[152px] h-[115px]'>
@@ -246,7 +250,7 @@ export default function ProductDetail() {
       {/* related products */}
       <section className='flex flex-col items-center mt-[135px]'>
         <h1 className='text-[32px] font-medium text-[#191919] mb-[66px]'>Realted products</h1>
-        <ul className='flex justify-between w-full px-[80px] gap-[28px]'>
+        <ul className='flex flex-col md:flex-row justify-between w-full px-[80px] gap-[28px]'>
           {
             relatedProducts.map((product, index) => {
               return (
@@ -279,21 +283,21 @@ export default function ProductDetail() {
         </div>
       </section>
       {/* Join to the news letter */}
-      <section className='relative flex justify-between px-20 py-[29px] bg-center backdrop-grayscale' style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1515940279136-2f419eea8051?q=80&w=2157&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
+      <section className='relative flex flex-col md:flex-row justify-between md:px-20 py-[29px] bg-center backdrop-grayscale' style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1515940279136-2f419eea8051?q=80&w=2157&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}>
         <div className='absolute top-0 right-0 left-0 bottom-0 bg-black opacity-50 w-full' />
         <div className='z-10 text-white'>
           <h3 className='text-[28px] font-medium'>Join our newsletter and get offers</h3>
           <h5 className='text-xl '>Sign up our newsletter</h5>
         </div>
         <form className='flex z-10'>
-          <input className='h-full text-[20px] py-[25px] pl-[37px] pr-[200px]' type='text' placeholder={`${susbscribe ? 'joedoe@gmail.com' : 'Enter your email'}`} />
-          <button onClick={(e) => { e.preventDefault(); setSusbscribe(true) }} className={`h-full text-[20px] text-white w-[268px] ${susbscribe ? 'bg-[#191919]' : 'bg-[#E73C17]'}`}>{susbscribe ? 'SUBSCRIBED!' : 'SUBSCRIBE'}</button>
+          <input className='h-full text-[20px] mdpy-[25px] md:pl-[37px] md:pr-[200px]' type='text' placeholder={`${susbscribe ? 'joedoe@gmail.com' : 'Enter your email'}`} />
+          <button onClick={(e) => { e.preventDefault(); setSusbscribe(true) }} className={`h-full text-[20px] text-white md:w-[268px] ${susbscribe ? 'bg-[#191919]' : 'bg-[#E73C17]'}`}>{susbscribe ? 'SUBSCRIBED!' : 'SUBSCRIBE'}</button>
         </form>
       </section>
       {/* footer */}
       <footer className='bg-[#2F333A] text-[white]'>
         <div className='max-w-[1440px] my-0 mx-auto py-[58px] pl-20 pr-10'>
-          <article className='flex justify-between gap-x-[47px] mb-12'>
+          <article className='flex flex-col md:flex-row justify-between gap-x-[47px] mb-12'>
             <div className='pr-[27px]'>
               <h1 className='text-white text-[24px] font-medium mb-[29px]'>ABOUT US</h1>
               <p className='text-lg leading-[30px] mb-[29px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lacinia nulla ut laoreet. Quisque ultricies et tortor nec laoreet. </p>
