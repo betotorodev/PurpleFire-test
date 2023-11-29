@@ -1,5 +1,5 @@
 import { cn } from '@/app/lib/utils'
-import Marquee from '@/app/ui/carousel/marquee'
+import Marquee from '@/app/ui/landing/carousel/carousel-component/marquee'
 import Image from 'next/image'
 import ImageOne from '@/public/image-1.webp'
 import ImageTwo from '@/public/image-2.webp'
@@ -43,7 +43,7 @@ const Logo = ({ name, img }) => {
   )
 }
 
-export const Carousel = () => {
+export const CarouselComponent = () => {
   return (
     <div className='relative flex h-full w-full flex-col items-center justify-center gap-4 overflow-hidden'>
       <Marquee className='[--gap:20px]'>
