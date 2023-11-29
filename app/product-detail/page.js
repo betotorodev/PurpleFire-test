@@ -97,7 +97,7 @@ export default function ProductDetail() {
         <div className='block md:hidden bg-[#E73C17] p-[9px]'>
           <MenuMobileTwo />
         </div>
-        <div className='relative w-[65px] md:w-[168px] h-[19px] md:h-[50px]'>
+        <div className='relative w-[65px] md:w-[168px] h-[19px] md:h-[50px] ml-16 md:ml-0'>
           <Image src={Logo} alt='Needus logo' fill />
         </div>
         <form className='hidden md:flex'>
@@ -128,9 +128,19 @@ export default function ProductDetail() {
             <SearchMobile />
             <User />
           </div>
-          <Like width='20' height='20' />
+          <div className='block md:hidden'>
+            <Like width='20' height='20' />
+          </div>
+          <div className='hidden md:block'>
+            <Like />
+          </div>
           <div className='relative'>
-            <Cart width='20' height='20' />
+            <div className='block md:hidden'>
+              <Cart width='20' height='20' />
+            </div>
+            <div className='hidden md:block'>
+              <Cart />
+            </div>
             <div class='absolute inline-flex items-center justify-center w-3 md:w-6 h-3 md:h-6 text-[7px] md:text-xs font-bold text-white bg-red-500 border-1 border-white rounded-full -top-1 md:-top-3 -end-1 md:-end-3'>8</div>
           </div>
         </div>
