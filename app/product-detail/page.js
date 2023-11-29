@@ -30,6 +30,8 @@ import { useState } from 'react'
 import { MenuMobileTwo } from '../ui/icons/menu-mobile-2'
 import { ArrowMobileRight } from '../ui/icons/arrow-mobile-right'
 import { ArrowMobileLeft } from '../ui/icons/arrow-mobile-left'
+import { SearchMobile } from '../ui/icons/search-mobile'
+import { User } from '../ui/icons/user'
 
 const relatedProducts = [
   {
@@ -121,11 +123,15 @@ export default function ProductDetail() {
             </div>
           </div>
         </form>
-        <div className='flex gap-[17px]'>
-          <Like />
+        <div className='flex gap-[6px] md:gap-[17px]'>
+          <div className='flex gap-[6px] md:hidden'>
+            <SearchMobile />
+            <User />
+          </div>
+          <Like width='20' height='20' />
           <div className='relative'>
-            <Cart />
-            <div class='absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-1 border-white rounded-full -top-3 -end-3'>8</div>
+            <Cart width='20' height='20' />
+            <div class='absolute inline-flex items-center justify-center w-3 md:w-6 h-3 md:h-6 text-[7px] md:text-xs font-bold text-white bg-red-500 border-1 border-white rounded-full -top-1 md:-top-3 -end-1 md:-end-3'>8</div>
           </div>
         </div>
       </section>
