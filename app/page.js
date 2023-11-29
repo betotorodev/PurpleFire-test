@@ -12,45 +12,52 @@ import { Instagram } from '@/app/ui/icons/instagram'
 import { Linkedin } from '@/app/ui/icons/linkedin'
 import { Twitter } from '@/app/ui/icons/twitter'
 import { Contact } from './ui/icons/contact'
+import { MenuMobile } from './ui/icons/menu-mobile'
 
 export default function Home() {
   return (
     <main className='w-full min-h-screen'>
       {/* hero */}
       <section className='w-full bg-[#F3EEE8]'>
-        <div className='flex max-w-[1440px] my-0 mx-auto'>
-          <div className='px-[150px] py-[55px] w-1/2 h-screen'>
-            <nav className='flex items-center h-fit'>
-              <h1 className={`${merriweather.variable} font-serif text-[34px] font-bold mr-8 tracking-[2px] leading-[25px]`}>antic</h1>
-              <ul className={`flex gap-6 ${varta.variable} font-sans text-[#706458]`}>
+        <div className='relative flex flex-col md:flex-row max-w-[1440px] my-0 mx-auto'>
+          <div className='absolute z-10 md:relative order-2 md:order-1 px-[31px] md:px-[150px] py-[51px] md:py-[55px] md:w-1/2 h-screen'>
+            <nav className='flex items-center justify-between md:justify-normal h-fit'>
+              <h1 className={`${merriweather.variable} font-serif text-[34px] text-white md:text-[#A06056] font-bold mr-8 tracking-[2px] leading-[25px]`}>antic</h1>
+              <div className='block md:hidden'>
+                <MenuMobile />
+              </div>
+              <ul className={`hidden md:flex gap-6 ${varta.variable} font-sans text-[#706458]`}>
                 <li>Products</li>
                 <li>Rooms</li>
                 <li>Services</li>
                 <li>Inspirations</li>
               </ul>
             </nav>
-            <div className='mt-[135px]'>
-              <h2 className={`${varta.variable} font-sans text-sm font-bold mb-[50px] leading-[1px]`}>HOME DESIGN</h2>
-              <h1 className={`${merriweather.variable} font-serif text-[50px] font-light leading-[70px] mb-[30px]`}>Elegance for Interiors & Exteriors</h1>
-              <p className={`${varta.variable} font-sans text-[22px] font-light leading-[30.8px] mb-12 text-[#706458E5]`}>We provide everyone with modern, trendy, quality furniture</p>
-              <a href='#hero-section-two'>
+            <div className='mt-[91px] md:mt-[135px] text-center md:text-left'>
+              <h2 className={`${varta.variable} font-sans text-sm text-white md:text-[#A06056] font-bold mb-6 md:mb-[50px] leading-[1px]`}>HOME DESIGN</h2>
+              <h1 className={`${merriweather.variable} font-serif text-[35px] md:text-[50px] text-white md:text-[#A06056] font-light leading-[40px] md:leading-[70px] mb-6 md:mb-[30px]`}>Elegance for Interiors & Exteriors</h1>
+              <p className={`${varta.variable} font-sans text-lg md:text-[22px] font-light leading-[25px] md:leading-[30.8px] mb-6 md:mb-12 text-white md:text-[#706458E5]`}>We provide everyone with modern, trendy, quality furniture</p>
+              <a href='#hero-section-two' className='flex justify-center md:hidden'>
+                <ArrowBrownDown color='white' />
+              </a>
+              <a href='#hero-section-two' className='hidden md:block'>
                 <ArrowBrownDown />
               </a>
             </div>
           </div>
-          <div className='w-full h-screen overflow-hidden relative'>
-            <div className='absolute right-[40px] top-[40px]'>
+          <div className='order-1 md:order-2 w-full h-[667px] md:h-screen overflow-hidden relative'>
+            <div className='hidden md:block absolute right-[40px] top-[40px]'>
               <Contact />
             </div>
-            <Image src={HeroImage} alt='Hero' priority />
+            <Image src={HeroImage} alt='Hero' priority fill />
           </div>
         </div>
       </section>
       {/* hero part two */}
       <section className='w-full bg-[#F3EEE8]' id='hero-section-two'>
-        <div className='max-w-[1440px] my-0 mx-auto flex gap-12 px-[150px] py-[70px]'>
+        <div className='max-w-[1440px] my-0 mx-auto block md:flex gap-12 md:px-[150px] py-[70px]'>
           <div>
-            <h1 className={`${merriweather.variable} w-[458px] font-serif text-[55px] text-[#706458] font-light mr-8 mb-[30px] tracking-[-0.6px] leading-[60px]`}>We stay by your side to design your projects</h1>
+            <h1 className={`${merriweather.variable} md:w-[458px] font-serif text-[35px] md:text-[55px] text-[#706458] font-light mr-8 mb-[30px] tracking-[-0.6px] leading-[60px]`}>We stay by your side to design your projects</h1>
             <a className={`${karla.variable} font-action flex items-center text-[17px] font-bold leading-[25px] tracking-[0.3px] text-[#A06056] cursor-pointer`}>Find out more <ArrowLightRight /></a>
           </div>
           <article className='flex flex-wrap gap-y-[30px] pt-5'>
@@ -74,7 +81,7 @@ export default function Home() {
         </div>
       </section>
       {/* call to action */}
-      <section className='max-w-[1440px] my-0 mx-auto flex justify-between items-center px-[150px] py-[70px]'>
+      <section className='max-w-[1440px] my-0 mx-auto block md:flex justify-between items-center md:px-[150px] py-[70px]'>
         <article>
           <h2 className={`${merriweather.variable} font-serif text-[35px] text-[#121212] font-light mb-[15px] tracking-[-0.3px] leading-[40px]`}>Be aware of the latest trends</h2>
           <p className={`${varta.variable} font-sans font-normal text-[#706458E5] text-lg leading-[25px] mb-[10px]`}>Stay informed of new trends, but also of our various offers.</p>
@@ -88,7 +95,7 @@ export default function Home() {
       {/* carrousel */}
       <section className='pt-16 pb-[70px]'>
         <Carousel />
-        <article className='max-w-[1440px] my-0 mx-auto flex justify-between px-[150px] mt-[40px]'>
+        <article className='max-w-[1440px] my-0 mx-auto block md:flex justify-between md:px-[150px] mt-[40px]'>
           <div className='flex gap-[30px]'>
             <h2 className={`${merriweather.variable} font-serif text-[35px] w-[360px] text-[#121212] font-light mb-[15px] tracking-[-0.3px] leading-[40px]`}>Inspirations</h2>
             <p className={`${varta.variable} font-sans font-normal w-[359px] text-[#706458E5] text-lg leading-[25px]`}>Our experts are keen to stay on top of trends in order to offer you new inspirations for your interior and exterior every day. Remember that to inspire you we have to inspire ourselves and we want to share that with you.</p>
@@ -104,8 +111,8 @@ export default function Home() {
       </section>
       {/* footer */}
       <footer className={`${varta.variable} font-sans bg-[#F3EEE8] text-[#706458]`}>
-        <div className='max-w-[1440px] my-0 mx-auto py-[70px] px-[150px]'>
-          <article className='flex justify-between gap-x-16 mb-12'>
+        <div className='max-w-[1440px] my-0 mx-auto md:py-[70px] md:px-[150px]'>
+          <article className='block md:flex justify-between gap-x-16 mb-12'>
             <h1 className={`${merriweather.variable} text-[#534B42] font-serif text-[34px] font-bold mr-8 tracking-[2px] leading-[25px]`}>antic</h1>
             <div>
               <h3 className='text-[25px] font-semibold leading-[30px] tracking-[-0.2px] mb-[23px]'>Products</h3>
