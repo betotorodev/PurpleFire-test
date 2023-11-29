@@ -14,7 +14,7 @@ import { Twitter } from '@/app/ui/icons/twitter'
 import { Contact } from './ui/icons/contact'
 import { MenuMobile } from './ui/icons/menu-mobile'
 
-export default function Home() {
+export default function Home () {
   return (
     <main className='w-full min-h-screen'>
       {/* hero */}

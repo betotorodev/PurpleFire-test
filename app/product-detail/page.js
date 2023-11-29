@@ -77,7 +77,7 @@ const Details = {
   REVIEWS: 'reviews'
 }
 
-export default function ProductDetail() {
+export default function ProductDetail () {
   const [showModal, setShowModal] = useState(false)
   const [detail, showDetail] = useState(Details.DESCRIPTION)
   const [susbscribe, setSusbscribe] = useState(false)
