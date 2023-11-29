@@ -113,9 +113,9 @@ export default function Home() {
       </section>
       {/* footer */}
       <footer className={`${varta.variable} font-sans bg-[#F3EEE8] text-[#706458]`}>
-        <div className='max-w-[1440px] my-0 mx-auto md:py-[70px] md:px-[150px]'>
-          <article className='block md:flex justify-between gap-x-16 mb-12'>
-            <h1 className={`${merriweather.variable} text-[#534B42] font-serif text-[34px] font-bold mr-8 tracking-[2px] leading-[25px]`}>antic</h1>
+        <div className='max-w-[1440px] my-0 mx-auto py-[48px] md:py-[70px] px-8 md:px-[150px]'>
+          <article className='flex md:flex-row flex-col justify-between gap-10 md:gap-x-16 mb-10 md:mb-12'>
+            <h1 className={`${merriweather.variable} text-[#534B42] text-center font-serif text-[34px] font-bold mr-8 tracking-[2px] leading-[25px]`}>antic</h1>
             <div>
               <h3 className='text-[25px] font-semibold leading-[30px] tracking-[-0.2px] mb-[23px]'>Products</h3>
               <ul className='flex flex-col gap-3 text-lg font-normal opacity-70'>
@@ -163,15 +163,15 @@ export default function Home() {
               <a className={`${karla.variable} font-action flex items-center text-[17px] font-bold leading-[25px] tracking-[0.3px] text-[#A06056] cursor-pointer`}>Learn more <ArrowLightRight /></a>
             </div>
           </article>
-          <div className='flex justify-center w-full gap-6 mb-5'>
+          <div className='flex justify-center w-full gap-6 mb-16 md:mb-5'>
             <Facebook />
             <Instagram />
             <Linkedin />
             <Twitter />
           </div>
-          <div className='flex justify-between items-center opacity-70'>
-            <span>© 2021 Agence Dnd</span>
-            <ul className='flex gap-[30px]'>
+          <div className='flex flex-col md:flex-row justify-between md:items-center opacity-70'>
+            <span className='order-2 md:order-1'>© 2021 Agence Dnd</span>
+            <ul className='flex flex-wrap md:flex-nowrap gap-[30px] order-1 md:order-2 mb-10 md:mb-0 text-lg md:text-base'>
               <li>Privacy policy</li>
               <li>Term of service</li>
               <li>Language</li>
