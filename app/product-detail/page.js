@@ -28,6 +28,8 @@ import { Cellphone } from '../ui/icons/cellphone'
 import { Location } from '../ui/icons/location'
 import { useState } from 'react'
 import { MenuMobileTwo } from '../ui/icons/menu-mobile-2'
+import { ArrowMobileRight } from '../ui/icons/arrow-mobile-right'
+import { ArrowMobileLeft } from '../ui/icons/arrow-mobile-left'
 
 const relatedProducts = [
   {
@@ -151,25 +153,36 @@ export default function ProductDetail() {
         <h2 className='text-[10px] md:text-lg font-light md:tracking-[3.6px] md:leading-[32px] text-[#191919]'>HOME / PRODUCT / TV / COLLECTION</h2>
       </section>
       {/* Product */}
-      <section className='flex flex-col md:flex-row gap-[35px] pl-[50px] pt-[82px] pr-[113px] pb-[104px]'>
-        <article className='flex gap-3'>
-          <ul className='flex flex-col gap-[30px]'>
-            <div className='relative bg-white border w-[152px] h-[115px]'>
+      <section className='flex flex-col md:flex-row gap-[35px] px-[19px] py-[10px] md:pl-[50px] md:pt-[82px] md:pr-[113px] md:pb-[104px]'>
+        <article className='flex flex-col items-center md:items-start md:flex-row gap-8 md:gap-3'>
+          <ul className='order-2 md:order-1 flex items-center flex-row md:flex-col gap-3 md:gap-[30px] mt-[11px] md:mt-0'>
+            <div className='block md:hidden p-[2px] bg-[#D9D9D9] mr-[9px]'>
+              <ArrowMobileLeft />
+            </div>
+            <div className='hidden md:block relative bg-white border w-[152px] h-[115px]'>
               <Image src={TvOne} alt='tv one' />
             </div>
-            <div className='relative bg-white border w-[152px] h-[115px]'>
+            <div className='relative flex items-center bg-white border w-[83px] h-[89px] md:w-[152px] md:h-[115px]'>
               <Image src={TvTwo} alt='tv two' />
             </div>
-            <div className='relative bg-white border w-[152px] h-[115px]'>
+            <div className='relative flex items-center bg-white border w-[83px] h-[89px] md:w-[152px] md:h-[115px]'>
               <Image src={TvThree} alt='tv three' />
             </div>
-            <div className='relative bg-white border w-[152px] h-[115px]'>
+            <div className='relative flex items-center bg-white border w-[83px] h-[89px] md:w-[152px] md:h-[115px]'>
               <Image src={TvFour} alt='tv four' />
             </div>
+            <div className='block md:hidden p-[2px] bg-[#E73C17] ml-[9px]'>
+              <ArrowMobileRight />
+            </div>
           </ul>
-          <div className='relative flex justify-center items-center bg-[#F1F1F1] w-[528px] h-[548px]'>
-            <Image src={MainTv} alt='Main Tv' />
-            <span className='absolute -bottom-14 left-0 text-[15px] text-[#6F6F6F] font-light'>*LG C2 42 (106cm) 4K Smart OLED evo TV</span>
+          <div className='order-1 md:order-2 relative flex justify-center items-center md:bg-[#F1F1F1]  w-[300px] md:w-[528px] md:h-[548px]'>
+            <div className='hidden md:block'>
+              <Image src={MainTv} alt='Main Tv' />
+            </div>
+            <div className='block md:hidden'>
+              <Image src={TvOne} alt='Main Tv' />
+            </div>
+            <span className='absolute -bottom-7 md:-bottom-14 left-[17%] md:left-0 text-[10px] md:text-[15px] text-[#6F6F6F] font-light'>*LG C2 42 (106cm) 4K Smart OLED evo TV</span>
           </div>
         </article>
         <article className='flex flex-col gap-5'>
