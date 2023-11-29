@@ -10,9 +10,9 @@ import { ArrowBrownLeft } from '@/app/ui/icons/arrow-brown-left'
 import { Facebook } from '@/app/ui/icons/facebook'
 import { Instagram } from '@/app/ui/icons/instagram'
 import { Linkedin } from '@/app/ui/icons/linkedin'
-import { Twitter } from './ui/icons/twitter'
-import { Contact } from './ui/icons/contact'
+import { Twitter } from './ui/icons/twitter-icon'
 import { MenuMobile } from './ui/icons/menu-mobile'
+import { Contact } from './ui/icons/contact'
 
 export default function Home() {
   return (
