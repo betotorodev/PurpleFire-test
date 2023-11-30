@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { MenuMobileTwo } from '@/app/ui/icons/menu-mobile-2'
 import Logo from '@/public/Needus.webp'
 import { Inputs } from '@/app/ui/product/form/inputs'
-import { Icons } from '@/app/icons'
+import { Icons } from '@/app/ui/product/form/icons'
 
 export const Form = () => {
   return (
