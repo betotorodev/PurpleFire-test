@@ -1,9 +1,9 @@
-import { Whatsapp } from '../ui/icons/whatsapp'
-import { FacebookTwo } from '../ui/icons/facebook-2'
-import { InstagramTwo } from '../ui/icons/instagram-2'
-import { Youtube } from '../ui/icons/youtube'
-import { Cellphone } from '../ui/icons/cellphone'
-import { Location } from '../ui/icons/location'
+import { Whatsapp } from '@/app/ui/icons/whatsapp'
+import { FacebookTwo } from '@/app/ui/icons/facebook-2'
+import { InstagramTwo } from '@/app/ui/icons/instagram-2'
+import { Youtube } from '@/app/ui/icons/youtube'
+import { Cellphone } from '@/app/ui/icons/cellphone'
+import { Location } from '@/app/ui/icons/location'
 
 export const Footer = () => {
   return (

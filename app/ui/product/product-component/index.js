@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import MainTv from '@/public/main-tv.webp'
 import TvOne from '@/public/tv-1.webp'
 import TvTwo from '@/public/tv-2.webp'

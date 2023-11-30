@@ -1,5 +1,7 @@
-import { relatedProducts } from '@/lib/const'
-import { Cart } from '../ui/icons/cart'
+import Image from 'next/image'
+
+import { RelatedProducts as relatedProducts } from '@/app/lib/const.js'
+import { Cart } from '@/app/ui/icons/cart'
 
 export const RelatedProducts = () => {
   const relatedProductsMobile = relatedProducts.slice(0, 2)

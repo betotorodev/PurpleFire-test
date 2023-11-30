@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Contact from '@/public/contact.webp'
 import { ArrowLightDown } from '@/app/ui/icons/arrow-light-down'
-import { Menu as MenuIcon } from '../ui/icons/menu'
+import { Menu as MenuIcon } from '@/app/ui/icons/menu'
 
 export const Menu = () => {
   return (

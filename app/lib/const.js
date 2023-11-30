@@ -11,7 +11,7 @@ export const Details = {
   REVIEWS: 'reviews'
 }
 
-export const relatedProducts = [
+export const RelatedProducts = [
   {
     badge: 'NEW',
     badgeColor: 'bg-[#12A05C]',
